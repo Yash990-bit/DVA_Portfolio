@@ -31,9 +31,9 @@ export default function Navbar() {
         <a href="https://github.com/Yash990-bit" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/5 rounded-full transition-colors">
           <FaGithub className="w-5 h-5" />
         </a>
-        <button className="hidden sm:block px-5 py-2 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase hover:bg-cyan-500/20 transition-all rounded-sm">
+        <a href="#contact" className="hidden sm:block px-5 py-2 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase hover:bg-cyan-500/20 transition-all rounded-sm">
           Hire Me
-        </button>
+        </a>
       </div>
     </motion.nav>
   );

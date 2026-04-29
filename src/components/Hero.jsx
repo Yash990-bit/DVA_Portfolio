@@ -41,16 +41,16 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="group relative px-8 py-4 bg-cyan-500 text-black font-bold rounded-sm overflow-hidden transition-all hover:scale-105 active:scale-95">
+            <a href="#projects" className="group relative px-8 py-4 bg-cyan-500 text-black font-bold rounded-sm overflow-hidden transition-all hover:scale-105 active:scale-95 inline-block">
               <span className="relative z-10 flex items-center gap-2">
                 Explore Dashboards <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            </button>
+            </a>
             
-            <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-sm hover:bg-white/10 transition-all">
-              The Methodology
-            </button>
+            <a href="/resume" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-sm hover:bg-white/10 transition-all inline-block">
+              Resume
+            </a>
           </div>
         </motion.div>
 
