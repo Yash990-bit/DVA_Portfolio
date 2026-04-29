@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
 import { SiLeetcode, SiCodeforces } from "react-icons/si";
 import { Mail, Phone, ExternalLink, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import DownloadResumeButton from "@/components/DownloadResumeButton";
 
 export const metadata = {
   title: "Yash Raghubanshi | AI/ML & Full-Stack Resume",
@@ -11,12 +12,15 @@ export const metadata = {
 export default function Resume() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-cyan-200">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl shadow-zinc-200/50 rounded-2xl overflow-hidden border border-zinc-200/50 relative">
+      <div id="resume-content" className="max-w-4xl mx-auto bg-white shadow-xl shadow-zinc-200/50 rounded-2xl overflow-hidden border border-zinc-200/50 relative">
         
-        {/* Back to Portfolio Button */}
-        <Link href="/" className="absolute top-6 right-8 text-zinc-400 hover:text-cyan-600 flex items-center gap-2 transition-colors text-sm font-medium">
-          <ArrowLeft className="w-4 h-4" /> Back to Portfolio
-        </Link>
+        {/* Top Actions */}
+        <div className="absolute top-6 right-8 flex items-center gap-4 print:hidden">
+          <DownloadResumeButton />
+          <Link href="/" className="text-zinc-400 hover:text-cyan-600 flex items-center gap-2 transition-colors text-sm font-medium">
+            <ArrowLeft className="w-4 h-4" /> Back to Portfolio
+          </Link>
+        </div>
 
         {/* Header */}
         <header className="px-8 md:px-12 pt-16 pb-8 border-b border-zinc-100">
@@ -61,7 +65,7 @@ export default function Resume() {
               Professional Summary
             </h2>
             <p className="text-zinc-700 leading-relaxed">
-              Aspiring AI/ML Engineer with a strong foundation in Full-Stack development and frontend technologies, focused on building scalable and user-friendly applications. Solved 170+ LeetCode problems with a 900+ Codeforces rating, demonstrating strong skills in Data Structures, Algorithms, and problem-solving.
+              Data Visualization Specialist and Analyst with a strong foundation in transforming complex datasets into interactive visual narratives. Experienced in building comprehensive Tableau dashboards to explore historical trends and market volatility, bridging the gap between raw numbers and actionable business insights.
             </p>
           </section>
 
@@ -75,60 +79,40 @@ export default function Resume() {
               {/* Project 1 */}
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold text-zinc-900">ChunkScope</h3>
+                  <h3 className="text-lg font-bold text-zinc-900">FIFA World Cup Analytics</h3>
                   <div className="flex items-center gap-4 text-sm font-medium text-zinc-500">
-                    <span>April 2026</span>
+                    <span>2024</span>
                     <span className="text-zinc-300">|</span>
                     <div className="flex gap-3">
-                      <a href="#" className="flex items-center gap-1 hover:text-cyan-600"><FaGithub /> Github</a>
-                      <a href="#" className="flex items-center gap-1 hover:text-cyan-600"><ExternalLink className="w-3 h-3" /> Demo</a>
+                      <a href="https://github.com/Yash990-bit/fifa_analytics" className="flex items-center gap-1 hover:text-cyan-600"><FaGithub /> Github</a>
+                      <a href="https://public.tableau.com/shared/6YGC2GMHB?:display_count=n&:origin=viz_share_link" className="flex items-center gap-1 hover:text-cyan-600"><ExternalLink className="w-3 h-3" /> Dashboard</a>
                     </div>
                   </div>
                 </div>
                 <ul className="list-disc list-inside text-zinc-700 space-y-1.5 leading-relaxed text-sm">
-                  <li>Built a RAG-based system to optimize chunking and retrieval strategies (Vector, BM25, Hybrid) for improved LLM performance.</li>
-                  <li>Developed using Next.js, React, FastAPI, and OpenAI APIs with real-time visualization of chunks and outputs.</li>
-                  <li>Improved LLM accuracy and reduced hallucinations through optimized RAG pipeline and evaluation metrics.</li>
+                  <li>Developed a comprehensive Tableau dashboard exploring 80+ years of football history (1930 - 2014).</li>
+                  <li>Visualized championship trends, team performances, and host nation statistics.</li>
+                  <li>Utilized Tableau, Excel, and Data Storytelling techniques to deliver interactive maps and insights.</li>
                 </ul>
               </div>
 
               {/* Project 2 */}
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold text-zinc-900">Revora — Agentic AI-Powered Sales Automation Platform</h3>
+                  <h3 className="text-lg font-bold text-zinc-900">Stock Market Dashboard</h3>
                   <div className="flex items-center gap-4 text-sm font-medium text-zinc-500">
-                    <span>March 2026</span>
+                    <span>2024</span>
                     <span className="text-zinc-300">|</span>
                     <div className="flex gap-3">
-                      <a href="#" className="flex items-center gap-1 hover:text-cyan-600"><FaGithub /> Github</a>
-                      <a href="#" className="flex items-center gap-1 hover:text-cyan-600"><ExternalLink className="w-3 h-3" /> Demo</a>
+                      <a href="https://github.com/Yash990-bit/StockMarket_Analytics" className="flex items-center gap-1 hover:text-cyan-600"><FaGithub /> Github</a>
+                      <a href="https://public.tableau.com/views/StockMarketAnalysis_Dashboard_17772303325680/Dashboard1?:language=en-GB&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link" className="flex items-center gap-1 hover:text-cyan-600"><ExternalLink className="w-3 h-3" /> Dashboard</a>
                     </div>
                   </div>
                 </div>
                 <ul className="list-disc list-inside text-zinc-700 space-y-1.5 leading-relaxed text-sm">
-                  <li>Built a backend system for automated lead generation and outreach, integrating APIs like Hunter.</li>
-                  <li>Developed using FastAPI, SQLAlchemy, and JWT authentication for secure campaign management and Gmail automation.</li>
-                  <li>Reduced manual effort and enabled scalable sales workflows through automated lead acquisition and outreach.</li>
-                </ul>
-              </div>
-
-              {/* Project 3 */}
-              <div>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold text-zinc-900">Multi-Disease Detection System</h3>
-                  <div className="flex items-center gap-4 text-sm font-medium text-zinc-500">
-                    <span>January 2026</span>
-                    <span className="text-zinc-300">|</span>
-                    <div className="flex gap-3">
-                      <a href="#" className="flex items-center gap-1 hover:text-cyan-600"><FaGithub /> Github</a>
-                      <a href="#" className="flex items-center gap-1 hover:text-cyan-600"><ExternalLink className="w-3 h-3" /> Demo</a>
-                    </div>
-                  </div>
-                </div>
-                <ul className="list-disc list-inside text-zinc-700 space-y-1.5 leading-relaxed text-sm">
-                  <li>Built a Multi-Disease Detection System to predict Liver, Heart, and Diabetes risks using ML models (Pandas, NumPy, Scikit-learn).</li>
-                  <li>Developed a full-stack application using Streamlit, React (Vite + Tailwind) with FastAPI and SQLAlchemy backend.</li>
-                  <li>Enabled accurate and real-time health risk assessment, supporting data-driven medical insights.</li>
+                  <li>Conducted historical performance and trend analysis for major tech giants (Apple, Google, Nvidia, Tesla, and Meta).</li>
+                  <li>Created dynamic visual components featuring real-time trends, moving averages, and volume-weighted insights.</li>
+                  <li>Applied predictive visualization techniques utilizing Tableau and Finance analytical methodologies.</li>
                 </ul>
               </div>
             </div>

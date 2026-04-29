@@ -67,3 +67,29 @@ body {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+/* Print styles for resume download */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  nav, footer {
+    display: none !important;
+  }
+
+  .shadow-xl, .shadow-md, .shadow-lg {
+    box-shadow: none !important;
+  }
+
+  .rounded-2xl {
+    border-radius: 0 !important;
+  }
+}
