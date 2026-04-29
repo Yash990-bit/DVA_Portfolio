@@ -1,6 +1,7 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,10 +19,10 @@ export default function Footer() {
               Whether you have a complex dataset or a vision for a dashboard, let's collaborate to bring your data to life.
             </p>
             <a 
-              href="mailto:yashraghubanshi@example.com" 
+              href="mailto:yash.raghubanshi2024@nst.rishihood.edu.in" 
               className="inline-flex items-center gap-2 text-xl font-bold hover:text-cyan-400 transition-colors group"
             >
-              yashraghubanshi@gmail.com
+              yash.raghubanshi2024@nst.rishihood.edu.in 
               <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
           </div>
@@ -29,10 +30,10 @@ export default function Footer() {
           <div className="flex flex-col md:items-end justify-between">
             <div className="flex gap-6 mb-8">
               {[
-                { icon: Github, link: "https://github.com/Yash990-bit" },
-                { icon: Linkedin, link: "#" },
-                { icon: Twitter, link: "#" },
-                { icon: Mail, link: "mailto:yashraghubanshi@gmail.com" }
+                { icon: FaGithub, link: "https://github.com/Yash990-bit" },
+                { icon: FaLinkedin, link: "https://www.linkedin.com/in/yash-raghubanshi-ba9ba630b/" },
+                { icon: FaInstagram, link: "https://www.instagram.com/whyash7/" },
+                { icon: Mail, link: "mailto:yash.raghubanshi2024@nst.rishihood.edu.in" }
               ].map((social, i) => {
                 const Icon = social.icon;
                 return (

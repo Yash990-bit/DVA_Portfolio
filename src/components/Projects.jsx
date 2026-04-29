@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Trophy, LineChart, Globe, Layers } from "lucide-react";
+import { ExternalLink, Trophy, LineChart, Globe, Layers } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
@@ -65,7 +66,7 @@ export default function Projects() {
                     </div>
                     <div className="flex gap-4">
                       <a href={project.repo} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/5 rounded-full text-gray-500 hover:text-white transition-colors">
-                        <Github className="w-6 h-6" />
+                        <FaGithub className="w-6 h-6" />
                       </a>
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/5 rounded-full text-gray-500 hover:text-white transition-colors">
                         <ExternalLink className="w-6 h-6" />
